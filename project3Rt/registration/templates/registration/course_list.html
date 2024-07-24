@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Course List</title>
+</head>
+<body>
+    <h1>Course List</h1>
+    <ul>
+        {% for course in courses %}
+        <li><a href="{%url 'register_student' course.id%}">{{course.name}}-{{course.description}}</a></li>
+        {% endfor %}
+    </ul>
+</html>  
